@@ -8,6 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    const showStatus = (html, color = '#166534') => {
+        if (!successMessage) {
+            return;
+        }
+
+        successMessage.innerHTML = html;
+        successMessage.style.color = color;
+        successMessage.style.marginTop = '0.75rem';
+        successMessage.style.textAlign = 'center';
+    };
+
     contactForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
