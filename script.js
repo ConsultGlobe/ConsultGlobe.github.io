@@ -8,42 +8,60 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const showStatus = (html, color = '#166534') => {
+    const recipient = 'consultglobe@proton.me';
+
+    const showStatus = (message, color = '#166534') => {
         if (!successMessage) {
             return;
         }
 
-        successMessage.innerHTML = html;
+        successMessage.textContent = message;
         successMessage.style.color = color;
         successMessage.style.marginTop = '0.75rem';
         successMessage.style.textAlign = 'center';
     };
 
-    contactForm.addEventListener('submit', (event) => {
+    contactForm.addEventListener('submit', async (event) => {
         event.preventDefault();
 
-        const name = document.getElementById('name')?.value?.trim() || '';
-        const email = document.getElementById('email')?.value?.trim() || '';
-        const subject = document.getElementById('subject')?.value?.trim() || 'Website enquiry';
-        const message = document.getElementById('message')?.value?.trim() || '';
+        const formData = new FormData(contactForm);
+        const name = String(formData.get('name') || '').trim();
+        const email = String(formData.get('email') || '').trim();
+        const subject = String(formData.get('subject') || '').trim() || 'Website enquiry';
+        const message = String(formData.get('message') || '').trim();
 
-        const recipient = 'consultglobe@proton.me';
-        const bodyLines = [
-            `Name: ${name}`,
-            `Email: ${email}`,
-            '',
-            message || 'No additional message provided.'
-        ];
+        formData.set('_subject', `ConsultGlobe contact: ${subject}`);
+        formData.set('_captcha', 'false');
+        formData.set('_template', 'table');
 
-        const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+        showStatus('Sending your message...');
 
-        if (successMessage) {
-            successMessage.textContent = 'Opening your email app...';
-            successMessage.style.color = '#166534';
-            successMessage.style.marginTop = '0.75rem';
-            successMessage.style.textAlign = 'center';
+        try {
+            const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(recipient)}`, {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json'
+                },
+                body: formData
+            });
+
+            if (!response.ok) {
+                throw new Error(`Request failed with status ${response.status}`);
+            }
+
+            showStatus('Thanks! Your message has been sent successfully.');
+            contactForm.reset();
+        } catch (error) {
+            const bodyLines = [
+                `Name: ${name}`,
+                `Email: ${email}`,
+                '',
+                message || 'No additional message provided.'
+            ];
+
+            const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+            showStatus('We could not send automatically. Opening your email app instead...', '#92400e');
+            window.location.href = mailtoLink;
         }
-
-        window.location.href = mailtoLink;
     });
 });
