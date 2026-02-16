@@ -37,22 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
 
-        showStatus('Trying to open your email app...');
+        if (successMessage) {
+            successMessage.textContent = 'Opening your email app...';
+            successMessage.style.color = '#166534';
+            successMessage.style.marginTop = '0.75rem';
+            successMessage.style.textAlign = 'center';
+        }
 
-        const tempLink = document.createElement('a');
-        tempLink.href = mailtoLink;
-        tempLink.style.display = 'none';
-        document.body.appendChild(tempLink);
-        tempLink.click();
-        document.body.removeChild(tempLink);
-
-        window.location.assign(mailtoLink);
-
-        window.setTimeout(() => {
-            showStatus(
-                `If your email app did not open, <a href="${mailtoLink}">click here to compose the email manually</a>.`,
-                '#1f6feb'
-            );
-        }, 1200);
+        window.location.href = mailtoLink;
     });
 });
