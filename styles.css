@@ -127,13 +127,9 @@ h2 {
 }
 
 .service-card img {
-  display: block;
   width: 100%;
-  height: 170px;
-  object-fit: contain;
-  padding: 0.85rem;
-  background: #f8fafc;
-  border-bottom: 1px solid var(--border);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .service-content {
@@ -224,10 +220,5 @@ footer {
 
   .service-content {
     padding: 0.9rem;
-  }
-
-  .service-card img {
-    height: 145px;
-    padding: 0.7rem;
   }
 }
