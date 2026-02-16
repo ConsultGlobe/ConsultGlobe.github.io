@@ -17,7 +17,7 @@ body {
 header {
     background: linear-gradient(135deg, #0044cc 0%, #0066ff 100%);
     color: white;
-    padding: 2rem 1rem;
+    padding: 1.1rem 1rem 0.9rem;
     box-shadow: 0 4px 12px rgba(0, 68, 204, 0.3);
     position: sticky;
     top: 0;
@@ -26,8 +26,8 @@ header {
 
 header h1 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -44,7 +44,7 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    padding: 0.75rem 1.5rem;
+    padding: 0.45rem 1rem;
     border-radius: 5px;
     transition: all 0.3s ease;
     display: inline-block;
@@ -143,7 +143,8 @@ label {
 
 select,
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+textarea {
     padding: 0.75rem;
     border: 2px solid #ddd;
     border-radius: 5px;
@@ -154,10 +155,16 @@ input[type="email"] {
 
 select:focus,
 input[type="text"]:focus,
-input[type="email"]:focus {
+input[type="email"]:focus,
+textarea:focus {
     outline: none;
     border-color: #0044cc;
     box-shadow: 0 0 8px rgba(0, 68, 204, 0.2);
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
 }
 
 /* Button Styling */
