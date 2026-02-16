@@ -1,0 +1,20 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Freelance consulting illustration">
+  <defs>
+    <linearGradient id="consultBg" x1="60" y1="0" x2="1120" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1F44"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#consultBg)"/>
+  <rect x="120" y="90" width="960" height="620" rx="34" fill="#FFFFFF" fill-opacity="0.08"/>
+  <rect x="200" y="180" width="800" height="460" rx="26" fill="#041225" fill-opacity="0.72" stroke="#99F6E4" stroke-opacity="0.42" stroke-width="3"/>
+  <path d="M300 540L470 390L620 460L780 320L900 360" stroke="#2DD4BF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="300" cy="540" r="14" fill="#5EEAD4"/>
+  <circle cx="470" cy="390" r="14" fill="#5EEAD4"/>
+  <circle cx="620" cy="460" r="14" fill="#5EEAD4"/>
+  <circle cx="780" cy="320" r="14" fill="#5EEAD4"/>
+  <circle cx="900" cy="360" r="14" fill="#5EEAD4"/>
+  <rect x="280" y="240" width="320" height="20" rx="10" fill="#CCFBF1"/>
+  <rect x="280" y="272" width="220" height="12" rx="6" fill="#99F6E4"/>
+  <text x="200" y="155" fill="#CCFBF1" font-family="Arial, sans-serif" font-size="30" font-weight="700">FREELANCE CONSULTING</text>
+</svg>
