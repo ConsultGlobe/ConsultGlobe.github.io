@@ -1,15 +1,17 @@
 .header {
-    padding: 0.75rem;
-}
-
-nav {
-    padding: 0.75rem 0;
+    padding: 0.3rem;
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
 }
 
 nav a {
-    padding: 0.4rem 1rem;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+nav {
+    gap: 1.5rem;
 }
