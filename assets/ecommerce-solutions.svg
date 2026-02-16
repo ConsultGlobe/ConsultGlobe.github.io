@@ -1,0 +1,21 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="E-commerce solutions illustration">
+  <defs>
+    <linearGradient id="commerceBg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#commerceBg)"/>
+  <rect x="140" y="90" width="920" height="620" rx="34" fill="#FFFFFF" fill-opacity="0.08"/>
+  <rect x="230" y="180" width="740" height="440" rx="26" fill="#0B1324" fill-opacity="0.65" stroke="#7DD3FC" stroke-opacity="0.5" stroke-width="3"/>
+  <rect x="280" y="260" width="640" height="80" rx="18" fill="#E0F2FE" fill-opacity="0.15"/>
+  <circle cx="340" cy="300" r="30" fill="#38BDF8"/>
+  <rect x="390" y="280" width="260" height="16" rx="8" fill="#E0F2FE"/>
+  <rect x="390" y="306" width="180" height="12" rx="6" fill="#BAE6FD"/>
+  <rect x="280" y="380" width="280" height="180" rx="20" fill="#082F49"/>
+  <rect x="590" y="380" width="330" height="180" rx="20" fill="#082F49"/>
+  <path d="M800 220L870 220L900 320H760L730 260H660" stroke="#7DD3FC" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="790" cy="600" r="24" fill="#7DD3FC"/>
+  <circle cx="880" cy="600" r="24" fill="#7DD3FC"/>
+  <text x="230" y="155" fill="#E0F2FE" font-family="Arial, sans-serif" font-size="30" font-weight="700">E-COMMERCE SOLUTIONS</text>
+</svg>
