@@ -3,38 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConsultGlobe - Software Development & Freelance Services</title>
+    <title>ConsultGlobe Services</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Welcome to ConsultGlobe</h1>
+        <h1>ConsultGlobe Software Services</h1>
         <nav>
             <ul>
-                <li><a href="#services">Services</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>We specialize in software development targeting gaming and e-commerce sectors.</p>
-            <ul>
-                <li>Game Development</li>
-                <li>E-commerce Solutions</li>
-                <li>Freelance Consulting</li>
-            </ul>
-        </section>
         <section id="about">
             <h2>About Us</h2>
-            <p>ConsultGlobe is your trusted partner in the ever-evolving tech landscape, helping businesses grow through innovative software solutions.</p>
+            <p>At ConsultGlobe, we provide top-notch software solutions tailored to meet your business needs.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Consulting</li>
+                <li>Custom Software Development</li>
+                <li>Integration Services</li>
+                <li>Technical Support</li>
+            </ul>
         </section>
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>Email: info@consultglobe.com</p>
-            <p>Phone: +1-800-555-0199</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
     </main>
     <footer>
