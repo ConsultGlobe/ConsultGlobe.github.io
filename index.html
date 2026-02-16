@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConsultGlobe - Software Services</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -12,8 +12,7 @@
         <nav>
             <ul>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#checkout">Checkout</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -22,47 +21,54 @@
         <h2>Our Services</h2>
         <div class="service-card">
             <h3>Game Development</h3>
-            <p>High-quality game development services with immersive graphics.</p>
+            <p>We create immersive and engaging games across all platforms. From indie projects to large-scale productions, our team specializes in developing games that captivate players with stunning graphics, engaging gameplay, and innovative mechanics.</p>
         </div>
         <div class="service-card">
             <h3>E-commerce Solutions</h3>
-            <p>Comprehensive e-commerce solutions to help your business thrive online.</p>
+            <p>Build a robust online presence with our comprehensive e-commerce solutions. We design and develop secure, scalable platforms that help your business reach customers worldwide, complete with payment processing, inventory management, and customer analytics.</p>
+        </div>
+        <div class="service-card">
+            <h3>Software Development</h3>
+            <p>Custom software solutions tailored to your business needs. Whether you need web applications, mobile apps, or enterprise software, our experienced developers deliver high-quality code with modern technologies and best practices.</p>
+        </div>
+        <div class="service-card">
+            <h3>Software Maintenance & Support</h3>
+            <p>Keep your software running smoothly with our ongoing maintenance and support services. We provide updates, bug fixes, performance optimization, and technical support to ensure your applications remain secure and efficient.</p>
+        </div>
+        <div class="service-card">
+            <h3>Freelance Consulting</h3>
+            <p>Expert technical consulting to guide your business through complex software challenges. Our consultants help with architecture design, technology selection, project planning, and strategic decisions to optimize your development process.</p>
         </div>
     </section>
 
-    <section id="pricing">
-        <h2>Pricing</h2>
-        <table>
-            <tr>
-                <th>Service</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>Game Development</td>
-                <td>$5000</td>
-            </tr>
-            <tr>
-                <td>E-commerce Solutions</td>
-                <td>$3000</td>
-            </tr>
-        </table>
-    </section>
-
-    <section id="checkout">
-        <h2>Checkout</h2>
-        <form action="/submit" method="POST">
-            <label for="service">Select Service:</label>
-            <select id="service" name="service">
-                <option value="game-development">Game Development</option>
-                <option value="e-commerce-solutions">E-commerce Solutions</option>
-            </select>
-            <br>
-            <button type="submit">Pay with PayPal</button>
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">
+            Ready to bring your project to life? Send us an email and we'll respond within 24 hours to discuss your needs.
+        </p>
+        <form id="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
+            
+            <button type="submit">Send Email</button>
         </form>
+        <div id="success-message" class="success-message"></div>
     </section>
 
     <footer>
         <p>&copy; 2026 ConsultGlobe. All rights reserved.</p>
+        <p>Email: contact@consultglobe.com | Phone: +1-800-555-0199</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
