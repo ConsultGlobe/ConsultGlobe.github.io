@@ -1,70 +1,338 @@
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* ConsultGlobe Professional Website Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1, h2, h3 {
-    font-family: 'Arial', sans-serif;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     color: #333;
+    background-color: #f5f5f5;
 }
 
-.header {
-    background-color: #0044cc;
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #0044cc 0%, #0066ff 100%);
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 68, 204, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.navbar {
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    background-color: #003366;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.navbar a {
+nav a {
     color: white;
-    padding: 14px 20px;
     text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Section Styling */
+section {
+    background: white;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #0044cc;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 1rem;
     text-align: center;
 }
 
-.navbar a:hover {
-    background-color: #005bb5;
+/* Service Cards */
+.service-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    border-left: 5px solid #0044cc;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.footer {
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 68, 204, 0.2);
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+}
+
+.service-card h3 {
+    color: #0044cc;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Pricing Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th {
+    background-color: #0044cc;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+table td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: 600;
+    color: #0044cc;
+    margin-bottom: 0.25rem;
+}
+
+select,
+input[type="text"],
+input[type="email"] {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+select:focus,
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #0044cc;
+    box-shadow: 0 0 8px rgba(0, 68, 204, 0.2);
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(40, 167, 69, 0.4);
+    background: linear-gradient(135deg, #20c997 0%, #17a2b8 100%);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+/* Footer */
+footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    padding: 2rem;
+    margin-top: 3rem;
 }
 
-.button {
-    background-color: #28a745;
-    border: none;
-    color: white;
-    padding: 10px 20px;
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    section {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    table th,
+    table td {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    section {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Trust Badges Section */
+.trust-section {
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f4ff 0%, #f8f9ff 100%);
     border-radius: 8px;
+    margin: 2rem 0;
 }
 
-.button:hover {
-    background-color: #218838;
+.trust-section h3 {
+    color: #0044cc;
+    margin-bottom: 1rem;
 }
 
-.card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    margin: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.badges {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.badge-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.badge p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Success Message */
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: none;
+    border-left: 5px solid #28a745;
+}
+
+.success-message.show {
+    display: block;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
