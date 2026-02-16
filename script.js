@@ -1,23 +1,38 @@
-// email contact form functionality
+// Email contact form functionality
 
-function openEmailClient() {
-    const subject = encodeURIComponent('Contact Form Submission');
-    const body = encodeURIComponent('Hello,\n\nI would like to contact you regarding...');
-    const email = 'consultglobe@proton.me';
-    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
-    window.location.href = mailtoLink;
-}
-
-// call the function when the form is submitted
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
 
     if (!contactForm) {
         return;
     }
 
     contactForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent the default form submission
-        openEmailClient();
+        event.preventDefault();
+
+        const name = document.getElementById('name')?.value?.trim() || '';
+        const email = document.getElementById('email')?.value?.trim() || '';
+        const subject = document.getElementById('subject')?.value?.trim() || 'Website enquiry';
+        const message = document.getElementById('message')?.value?.trim() || '';
+
+        const recipient = 'consultglobe@proton.me';
+        const bodyLines = [
+            `Name: ${name}`,
+            `Email: ${email}`,
+            '',
+            message || 'No additional message provided.'
+        ];
+
+        const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+
+        if (successMessage) {
+            successMessage.textContent = 'Opening your email app...';
+            successMessage.style.color = '#166534';
+            successMessage.style.marginTop = '0.75rem';
+            successMessage.style.textAlign = 'center';
+        }
+
+        window.location.href = mailtoLink;
     });
 });
