@@ -3,48 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConsultGlobe Services</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>ConsultGlobe - Software Services</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>ConsultGlobe Software Services</h1>
+        <h1>ConsultGlobe</h1>
         <nav>
             <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Our Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#checkout">Checkout</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>At ConsultGlobe, we provide top-notch software solutions tailored to meet your business needs.</p>
-        </section>
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Consulting</li>
-                <li>Custom Software Development</li>
-                <li>Integration Services</li>
-                <li>Technical Support</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-card">
+            <h3>Game Development</h3>
+            <p>High-quality game development services with immersive graphics.</p>
+        </div>
+        <div class="service-card">
+            <h3>E-commerce Solutions</h3>
+            <p>Comprehensive e-commerce solutions to help your business thrive online.</p>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Game Development</td>
+                <td>$5000</td>
+            </tr>
+            <tr>
+                <td>E-commerce Solutions</td>
+                <td>$3000</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="checkout">
+        <h2>Checkout</h2>
+        <form action="/submit" method="POST">
+            <label for="service">Select Service:</label>
+            <select id="service" name="service">
+                <option value="game-development">Game Development</option>
+                <option value="e-commerce-solutions">E-commerce Solutions</option>
+            </select>
+            <br>
+            <button type="submit">Pay with PayPal</button>
+        </form>
+    </section>
+
     <footer>
         <p>&copy; 2026 ConsultGlobe. All rights reserved.</p>
     </footer>
