@@ -5,197 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConsultGlobe - Software Services</title>
     <link rel="stylesheet" href="/styles.css?v=20260216">
-    <style>
-:root {
-  --brand: #1f6feb;
-  --brand-dark: #144a9e;
-  --text: #1f2937;
-  --muted: #6b7280;
-  --bg: #f8fafc;
-  --card: #ffffff;
-  --border: #e5e7eb;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.5;
-}
-
-header {
-  background: linear-gradient(120deg, var(--brand), var(--brand-dark));
-  color: #fff;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-nav ul {
-  list-style: none;
-  margin: 1rem 0 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.35rem 0.75rem;
-  border-radius: 9999px;
-}
-
-nav a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-section {
-  max-width: 960px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.service-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.07);
-}
-
-.service-card h3 {
-  margin: 0 0 0.5rem;
-}
-
-#contact-form {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.07);
-}
-
-#contact-form label {
-  display: block;
-  margin: 0.8rem 0 0.25rem;
-  font-weight: 600;
-}
-
-#contact-form input,
-#contact-form textarea {
-  width: 100%;
-  padding: 0.7rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font: inherit;
-}
-
-#contact-form textarea {
-  min-height: 130px;
-  resize: vertical;
-}
-
-#contact-form button {
-  margin-top: 1rem;
-  background: var(--brand);
-  color: #fff;
-  border: 0;
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-#contact-form button:hover {
-  background: var(--brand-dark);
-}
-
-footer {
-  margin-top: 2rem;
-  background: #0f172a;
-  color: #cbd5e1;
-  text-align: center;
-  padding: 1.25rem 1rem;
-}
-
-    </style>
 </head>
 <body>
-    <header>
-        <h1>ConsultGlobe</h1>
-        <nav>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="header-shell">
+            <p class="eyebrow">Technology Consulting & Product Engineering</p>
+            <h1>ConsultGlobe</h1>
+            <p class="hero-copy">We help ambitious teams launch reliable digital products with strategy, engineering, and ongoing support.</p>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-card">
-            <h3>Game Development</h3>
-            <p>We provide tools and template to help create immersive and engaging games for Windows and Android. From indie projects to large-scale productions, our software solution offer specialized templates to make development quickier and easier.</p>
-        </div>
-        <div class="service-card">
-            <h3>E-commerce Solutions</h3>
-            <p>Build a robust online presence with our comprehensive e-commerce solutions. We design and develop secure, scalable platforms that help your business reach customers worldwide, complete with payment processing, inventory management, and customer analytics.</p>
-        </div>
-        <div class="service-card">
-            <h3>Software Development</h3>
-            <p>Custom software solutions tailored to your business needs. Whether you need web applications, mobile apps, or enterprise software, our experienced developers deliver high-quality code with modern technologies and best practices.</p>
-        </div>
-        <div class="service-card">
-            <h3>Software Maintenance & Support</h3>
-            <p>Keep your software running smoothly with our ongoing maintenance and support services. We provide updates, bug fixes, performance optimization, and technical support to ensure your applications remain secure and efficient.</p>
-        </div>
-        <div class="service-card">
-            <h3>Freelance Consulting</h3>
-            <p>Expert technical consulting to guide your business through complex software challenges. Our consultants help with architecture design, technology selection, project planning, and strategic decisions to optimize your development process.</p>
-        </div>
-    </section>
+    <main>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p class="section-intro">Business-ready solutions that combine modern software architecture, speed, and measurable outcomes.</p>
 
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 2rem;">
-            Ready to bring your project to life? Send us an email and we'll respond within 24 hours to discuss your needs.
-        </p>
-        <form id="contact-form" action="https://formsubmit.co/bc17cc9fbe9a8bb22aeddbddb5e2550e" method="POST">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required placeholder="Enter your full name">
-            
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Enter your email address">
-            
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required placeholder="What is this about?">
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
-            
-            <button type="submit">Send Email</button>
-        </form>
-        <div id="success-message" class="success-message" aria-live="polite"></div>
-    </section>
+            <div class="services-grid">
+                <article class="service-card">
+                    <img src="assets/business-strategy.svg" alt="Business strategy visual placeholder" loading="lazy">
+                    <div class="service-content">
+                        <h3>Game Development</h3>
+                        <p>We provide tools and templates to help create immersive and engaging games for Windows and Android. From indie projects to large-scale productions, our software solutions streamline development and delivery.</p>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="assets/digital-transformation.svg" alt="Digital transformation visual placeholder" loading="lazy">
+                    <div class="service-content">
+                        <h3>E-commerce Solutions</h3>
+                        <p>Build a robust online presence with secure, scalable platforms complete with payment processing, inventory management, and customer analytics for global growth.</p>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="assets/business-growth.svg" alt="Business growth visual placeholder" loading="lazy">
+                    <div class="service-content">
+                        <h3>Software Development</h3>
+                        <p>Custom software solutions tailored to your business needs. We deliver high-quality web, mobile, and enterprise applications with modern technologies and best practices.</p>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="assets/business-strategy.svg" alt="Software support visual placeholder" loading="lazy">
+                    <div class="service-content">
+                        <h3>Software Maintenance & Support</h3>
+                        <p>Keep your software running smoothly with proactive maintenance, bug fixes, optimization, and responsive technical support.</p>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="assets/digital-transformation.svg" alt="Freelance consulting visual placeholder" loading="lazy">
+                    <div class="service-content">
+                        <h3>Freelance Consulting</h3>
+                        <p>Expert consulting for architecture design, technology selection, and strategic planning to ensure your delivery roadmap stays focused and efficient.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p class="section-intro">Ready to bring your project to life? Send us an email and we'll respond within 24 hours.</p>
+            <form id="contact-form" action="https://formsubmit.co/bc17cc9fbe9a8bb22aeddbddb5e2550e" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
+
+                <button type="submit">Send Email</button>
+            </form>
+            <div id="success-message" class="success-message" aria-live="polite"></div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 ConsultGlobe. All rights reserved.</p>
