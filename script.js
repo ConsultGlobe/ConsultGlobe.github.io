@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const recipient = 'consultglobe@proton.me';
+    const formAction = contactForm.getAttribute('action') || '';
+    const ajaxEndpoint = formAction.replace('https://formsubmit.co/', 'https://formsubmit.co/ajax/');
 
     const showStatus = (message, color = '#166534') => {
         if (!successMessage) {
@@ -25,10 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         const formData = new FormData(contactForm);
-        const name = String(formData.get('name') || '').trim();
-        const email = String(formData.get('email') || '').trim();
         const subject = String(formData.get('subject') || '').trim() || 'Website enquiry';
-        const message = String(formData.get('message') || '').trim();
 
         formData.set('_subject', `ConsultGlobe contact: ${subject}`);
         formData.set('_captcha', 'false');
@@ -37,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showStatus('Sending your message...');
 
         try {
-            const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(recipient)}`, {
+            const response = await fetch(ajaxEndpoint, {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json'
@@ -52,16 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showStatus('Thanks! Your message has been sent successfully.');
             contactForm.reset();
         } catch (error) {
-            const bodyLines = [
-                `Name: ${name}`,
-                `Email: ${email}`,
-                '',
-                message || 'No additional message provided.'
-            ];
-
-            const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
-            showStatus('We could not send automatically. Opening your email app instead...', '#92400e');
-            window.location.href = mailtoLink;
+            showStatus('We could not send your message automatically. Please try again shortly.', '#92400e');
         }
     });
 });
